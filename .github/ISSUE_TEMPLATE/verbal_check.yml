@@ -1,0 +1,38 @@
+name: Verbal Check
+description: The short spoken check on a challenge, done in lab with the instructor.
+title: "Challenge 7 Verbal Check"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Filled in by the instructor or a technical leader during lab. The student
+        answers two or three questions about their own code in the context of the
+        assignment at hand. This is a check on understanding, not a presentation.
+  - type: input
+    attributes:
+      label: Student
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Understanding
+      description: Tick each line the student explained correctly, in their own words. Two or three questions is enough.
+      options:
+        - label: "What the MCP server does, and what VS Code does."
+        - label: "How the planted email reached the model, and what stopped it."
+        - label: "What an approval protects, and what Restore Checkpoint cannot undo."
+        - label: "How the agent got through the inbox, and what limits a long run."
+        - label: "How they checked the code the agent wrote."
+  - type: dropdown
+    attributes:
+      label: Outcome
+      options:
+        - "Passed: explained their own work clearly"
+        - "Passed with gaps: correct code, shaky explanation"
+        - "Not yet: could not provide clear answers, can redo with a token use"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Notes
+      description: What to follow up on, and anything worth remembering for the next challenge.

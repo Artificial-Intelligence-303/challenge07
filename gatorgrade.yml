@@ -1,0 +1,90 @@
+# Automated checks for Challenge 7. Run them yourself with:
+#
+#     uv run gatorgrade --config gatorgrade.yml
+#
+# These are the same checks that run on GitHub when you push. Results are
+# preliminary: the final grade is determined by the instructor.
+
+- description: "[RUN] The log holds a list_folder call and a read_email call"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_the_agent_read_the_inbox
+
+- description: "[RUN] The log holds a list_folder call for page 2 or later (task 3)"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_the_agent_went_past_the_first_page
+
+- description: "[RUN] The log holds a move_email call that succeeded"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_the_agent_moved_an_email
+
+- description: "[RUN] The log holds a send_email call that succeeded (task 1)"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_the_agent_sent_a_reply
+
+- description: "[RUN] The log holds an unsubscribe call that succeeded (task 6)"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_the_agent_unsubscribed
+
+- description: "[RUN] The provided tools still work"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_tools.py
+
+- description: "[RUN] The server offers unsubscribe"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_unsubscribe.py::test_the_server_offers_unsubscribe
+
+- description: "[RUN] The library's inbox emails go to archive; nothing else moves"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_unsubscribe.py::test_unsubscribe_archives_that_sender_only
+
+- description: "[RUN] Unsubscribing from an unknown sender is an error result"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_unsubscribe.py::test_unsubscribing_from_a_stranger_is_an_error_result
+
+- description: "[RUN] An unsubscribe is logged"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_unsubscribe.py::test_an_unsubscribe_is_logged
+
+- description: "[RUN] The code follows the Google Python style guide"
+  check: ExecuteCommand
+  options:
+    command: uv run ruff check src tests
+
+- AGENTS.md:
+  - description: "[RUN] AGENTS.md holds your rule, no TODO left"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+- docs/session.md:
+  - description: "[RUN] The session record has no TODO left"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+- docs/summary.md:
+  - description: "[REFLECTION] The reflection has no TODO markers left in it"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+  - description: "[REFLECTION] The reflection meets the 250 word minimum"
+    check: CountFileWords
+    options:
+      count: 250
+      exact: false
