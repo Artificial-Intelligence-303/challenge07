@@ -34,7 +34,7 @@ TODO
 > Describe in words a fixed workflow for sorting this inbox, with the
 > steps set in code. Which orchestration pattern from class is it? Would
 > it have followed the planted email? Name one thing the agent did that
-> your workflow could not, and name the agent framework you used.
+> your workflow could not.
 
 TODO
 
