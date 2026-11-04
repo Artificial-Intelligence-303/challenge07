@@ -56,8 +56,9 @@ task stays.
    banner offering to download another agent.
 5. Under the prompt box, set **Agent** and **Manual permissions**. Leave
    the model on **Auto** for now.
-6. Start the server: **Customizations** in the sidebar, then **MCP
-   Servers**, then **Start Server** in the `inbox` server's **...** menu.
+6. Select **Customizations** in the sidebar, then **MCP Servers**. Check
+   that `inbox` is switched on, then close the window. Ignore "Migration
+   available".
 
 In every task: expand each tool call in the chat to see its arguments and
 result, and write them in `docs/session.md` before you move on. Start a
