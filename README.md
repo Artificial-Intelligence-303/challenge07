@@ -50,12 +50,14 @@ task stays.
 1. Run `uv sync` in this folder once.
 2. In VS Code, select **Open in Agents** in the title bar (or run **Chat:
    Open Agents window** from the Command Palette).
-3. Select **New**, choose **This Computer**, and choose this folder. Trust
-   it if asked.
-4. Set **Copilot** as the session target, **Agent** as the agent, and
-   **Manual permissions**. Leave the model on **Auto** for now.
-5. Start the server: **Chat: Open Customizations**, then **MCP Servers**,
-   then **Start Server** in the `inbox` server's **...** menu.
+3. In the row above the prompt box, check for **This Computer** and this
+   folder. To change the folder, select its name. Trust it if asked.
+4. In that row, select the agent name and choose **Copilot**. Ignore any
+   banner offering to download another agent.
+5. Under the prompt box, set **Agent** and **Manual permissions**. Leave
+   the model on **Auto** for now.
+6. Start the server: **Customizations** in the sidebar, then **MCP
+   Servers**, then **Start Server** in the `inbox` server's **...** menu.
 
 In every task: expand each tool call in the chat to see its arguments and
 result, and write them in `docs/session.md` before you move on. Start a
@@ -94,7 +96,7 @@ keys**, **Add API key**.
 
 1. Run **Chat: Manage Language Models**, select **Add Models**, then
    **Custom Endpoint**.
-2. Group name `OpenCode Zen`. For the API key, enter
+2. Group and display name `OpenCode Zen`. For the API key, enter
    `${input:zenKey}`; VS Code asks for the key once and stores it outside
    this repository.
 3. API type **Chat Completions**. In the `chatLanguageModels.json` that
