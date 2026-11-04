@@ -87,8 +87,10 @@ pages. Approve the moves, then count the calls in the log.
 ### Task 4: a model you add yourself
 
 Copilot's model list is set by your plan. You can add others with an API
-key (bring your own key). You need the OpenCode Zen key given out in
-class.
+key (bring your own key). You need an OpenCode Zen key: accept the
+OpenCode invitation sent to your email, then in the
+[console](https://opencode.ai/console) select **Account**, **Personal API
+keys**, **Add API key**.
 
 1. Run **Chat: Manage Language Models**, select **Add Models**, then
    **Custom Endpoint**.
