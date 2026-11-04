@@ -100,18 +100,12 @@ keys**, **Add API key**.
 2. Group name `OpenCode Zen`. For the API key, paste your key. VS Code
    stores it outside this repository.
 3. API type **Chat Completions**. In the `chatLanguageModels.json` that
-   opens, keep the `apiKey` line as it is and make the model entry:
+   opens, replace the blank `id`, `name` and `url` lines with:
 
    ```json
-   {
-     "id": "glm-5.3-flash",
-     "name": "GLM 5.3 Flash (Zen)",
-     "url": "https://opencode.ai/inference/openai/v1/chat/completions",
-     "toolCalling": true,
-     "vision": false,
-     "maxInputTokens": 120000,
-     "maxOutputTokens": 8000
-   }
+   "id": "glm-5.3-flash",
+   "name": "GLM 5.3 Flash (Zen)",
+   "url": "https://opencode.ai/inference/openai/v1/chat/completions",
    ```
 
 4. In Settings, turn on `chat.agentHost.byokModels.enabled`, so the model
