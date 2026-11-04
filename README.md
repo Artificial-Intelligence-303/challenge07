@@ -55,7 +55,7 @@ task stays.
 4. In that row, select the agent name and choose **Copilot**. Ignore any
    banner offering to download another agent.
 5. Under the prompt box, set **Agent** and **Manual permissions**. Leave
-   the model on **Auto** for now.
+   the model as it is for now.
 6. Select **Customizations** in the sidebar, then **MCP Servers**. Check
    that `inbox` is switched on, then close the window. Ignore "Migration
    available".
@@ -95,13 +95,12 @@ OpenCode invitation sent to your email, then in the
 [console](https://opencode.ai/console) select **Account**, **Personal API
 keys**, **Add API key**.
 
-1. Run **Chat: Manage Language Models**, select **Add Models**, then
-   **Custom Endpoint**.
-2. Group and display name `OpenCode Zen`. For the API key, enter
-   `${input:zenKey}`; VS Code asks for the key once and stores it outside
-   this repository.
+1. From the Command Palette, run **Chat: Manage Language Models**, select
+   **Add Models**, then **Custom Endpoint**.
+2. Group name `OpenCode Zen`. For the API key, paste your key. VS Code
+   stores it outside this repository.
 3. API type **Chat Completions**. In the `chatLanguageModels.json` that
-   opens, make the model entry:
+   opens, keep the `apiKey` line as it is and make the model entry:
 
    ```json
    {
@@ -116,8 +115,9 @@ keys**, **Add API key**.
    ```
 
 4. In Settings, turn on `chat.agentHost.byokModels.enabled`, so the model
-   can run Copilot agent sessions. Restart VS Code if it does not appear
-   in the model picker.
+   can run Copilot agent sessions, then quit and reopen VS Code.
+5. In a new session, open the model picker under the prompt box, select
+   its **OpenCode Zen** tab, and choose **GLM 5.3 Flash (Zen)**.
 
 Run `reset`, then repeat task 2 in a new session with that model.
 
