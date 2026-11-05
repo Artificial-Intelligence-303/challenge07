@@ -197,8 +197,12 @@ I decided the shape: an agent you configure, test against a planted
 email and observe, with a server whose log records what actually
 happened. You run the agent and write no code, which was also my call.
 
-I used Claude to draft the server, the mailbox, the tests and initial version of this
-README. I wrote the  VS Code steps from the documentation, ran the setup, ran the server over the same connection VS Code uses, and the code in task 6.
+I used Claude to draft the server, the mailbox, the tests, this README and
+its VS Code steps. Claude ran the server over the same connection VS Code
+uses and checked that the tests catch several wrong versions of
+`unsubscribe`. I ran the setup, the model steps in task 4, the code in
+task 6 and a declined call in VS Code, and had the steps revised from what
+I saw.
 
 ## Disclosing your AI use
 
