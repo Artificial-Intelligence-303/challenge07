@@ -1,4 +1,4 @@
-"""Point every test at its own bookings and log, never at yours."""
+"""Point every test at its own mailbox and log, never at yours."""
 
 from pathlib import Path
 

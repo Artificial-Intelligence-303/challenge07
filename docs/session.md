@@ -8,8 +8,7 @@ your answer, and the agent's last message. Replace each TODO.
 
 TODO
 
-After Restore Checkpoint, what did `uv run python src/main.py show sent`
-print?
+What did `uv run python src/main.py show sent` print?
 
 TODO
 

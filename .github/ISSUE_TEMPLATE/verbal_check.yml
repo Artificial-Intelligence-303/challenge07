@@ -6,8 +6,7 @@ body:
     attributes:
       value: |
         Filled in by the instructor or a technical leader during lab. The student
-        answers two or three questions about their own code in the context of the
-        assignment at hand. This is a check on understanding, not a presentation.
+        answers two or three questions about their own sessions in the context of the assignment at hand. This is a check on understanding, not a presentation.
   - type: input
     attributes:
       label: Student
@@ -20,7 +19,7 @@ body:
       options:
         - label: "What the MCP server does, and what VS Code does."
         - label: "How the planted email reached the model, and what stopped it."
-        - label: "What an approval protects, and what Restore Checkpoint cannot undo."
+        - label: "What an approval protects, and which calls asked for one."
         - label: "How the agent got through the inbox, and what limits a long run."
         - label: "How they checked the code the agent wrote."
   - type: dropdown
@@ -28,7 +27,7 @@ body:
       label: Outcome
       options:
         - "Passed: explained their own work clearly"
-        - "Passed with gaps: correct code, shaky explanation"
+        - "Passed with gaps: correct record, shaky explanation"
         - "Not yet: could not provide clear answers, can redo with a token use"
     validations:
       required: true
