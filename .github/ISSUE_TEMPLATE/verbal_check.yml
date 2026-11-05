@@ -22,6 +22,8 @@ body:
         - label: "What an approval protects, and which calls asked for one."
         - label: "How the agent got through the inbox, and what limits a long run."
         - label: "How they checked the code the agent wrote."
+        - label: "What changed when they added a model and wrote a rule."
+        - label: "How a fixed workflow would differ from the agent."
   - type: dropdown
     attributes:
       label: Outcome
